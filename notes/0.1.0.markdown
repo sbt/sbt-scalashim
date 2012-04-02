@@ -1,0 +1,27 @@
+This is the initial release of sbt-scalashim.
+
+Usage
+-----
+
+Add the following to your `build.sbt`:
+
+    scalaShimSettings
+
+    sourceGenerators in Compile <+= scalaShim
+
+When you reload the settings and compile, this generates the following `scalaVersion` is prior to 2.9:
+
+    object sys {
+      def error(message: String): Nothing = throw new RuntimeException(message)
+
+      def exit(): Nothing = exit(0)
+      
+      def exit(status: Int): Nothing = {
+        java.lang.System.exit(status)
+        throw new Throwable()
+      }
+    }
+
+See [readme][1] for more info.
+
+  [1]: https://github.com/sbt/sbt-scalashim
