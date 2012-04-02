@@ -16,6 +16,9 @@ seq(lsSettings :_*)
 
 LsKeys.tags in LsKeys.lsync := Seq("sbt", "codegen")
 
+(externalResolvers in LsKeys.lsync) := Seq(
+  "sbt-plugin-releases" at "http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases")
+
 publishArtifact in (Compile, packageBin) := true
 
 publishArtifact in (Test, packageBin) := false
