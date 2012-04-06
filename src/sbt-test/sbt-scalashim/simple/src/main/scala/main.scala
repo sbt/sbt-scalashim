@@ -1,3 +1,4 @@
 object Main extends Application {
-  sys.error("Hello, world!")
+  println(sys.env("EDITOR"))
+  // sys.error("Hello, world!")
 }

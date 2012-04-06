@@ -4,7 +4,7 @@ name := "sbt-scalashim"
 
 organization := "com.eed3si9n"
 
-version := "0.1.0"
+version := "0.2.0"
 
 description := "sbt plugin to generate shim like sys.error"
 
