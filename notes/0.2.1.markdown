@@ -1,5 +1,5 @@
 ## Bug fix
 
-- Generates fake `sys` object into `scalashim` object (otherwise, it can't be used from a packaged classes!). [#2][2]
+- Generates fake `sys` object into `scalashim` package (otherwise, it can't be used from a packaged classes!). [#2][2]
 
   [2]: https://github.com/sbt/sbt-scalashim/issues/2
