@@ -8,4 +8,6 @@ crossScalaVersions := Seq("2.8.0", "2.8.1", "2.9.1")
 
 scalaShimSettings
 
+scalaShimPackage := "scalashim"
+
 sourceGenerators in Compile <+= scalaShim

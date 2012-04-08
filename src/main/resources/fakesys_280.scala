@@ -6,6 +6,8 @@
 **                          |/                                          **
 \*                                                                      */
 
+$package$
+
 object sys {
   import scala.collection.immutable
   import scala.collection.{ mutable, Iterator }

@@ -24,8 +24,16 @@ scalaShimSettings
 sourceGenerators in Compile <+= scalaShim
 ```
 
-When you reload the settings and compile, this generates a fake `sys` object for 2.8.x.
+When you reload the settings and compile, this generates a fake `sys` object under `scalashim` package for 2.8.x.
 The supported methods are `sys.error`, `sys.exit`, `sys.runtime`, `sys.props`, `sys.env`, and `sys.allThreads`.
+
+To use them, add `import scalashim._` in your source code.
+
+To customize the package:
+
+```scala
+scalaShimPackage := "something"
+```
 
 License
 -------
