@@ -1,3 +1,5 @@
+package foo
+
 import scalashim._
 
 object Main extends Application {

@@ -1,1 +1,3 @@
 $package$
+
+object SysDummy {}
