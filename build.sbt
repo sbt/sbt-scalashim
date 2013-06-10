@@ -12,13 +12,6 @@ licenses := Seq("MIT License" -> url("http://www.opensource.org/licenses/mit-lic
 
 seq(ScriptedPlugin.scriptedSettings: _*)
 
-seq(lsSettings :_*)
-
-LsKeys.tags in LsKeys.lsync := Seq("sbt", "codegen")
-
-(externalResolvers in LsKeys.lsync) := Seq(
-  "sbt-plugin-releases" at "http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases")
-
 publishArtifact in (Compile, packageBin) := true
 
 publishArtifact in (Test, packageBin) := false
@@ -37,3 +30,14 @@ publishTo <<= (version) { version: String =>
 }
 
 credentials += Credentials(Path.userHome / ".ivy2" / ".sbtcredentials")
+
+// seq(lsSettings :_*)
+
+// LsKeys.tags in LsKeys.lsync := Seq("sbt", "codegen")
+
+// (externalResolvers in LsKeys.lsync) := Seq(
+//   "sbt-plugin-releases" at "http://scalasbt.artifactoryonline.com/scalasbt/sbt-plugin-releases")
+
+sbtVersion in Global := "0.13.0-Beta2" 
+
+scalaVersion in Global := "2.10.2-RC2" 
